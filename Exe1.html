@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        .navbar {
+            background-color: whitesmoke;
+            width: 20%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+        }
+
+        .navbar h1 {
+            font: normal small-caps 450 27px Times New Roman;
+            padding-left: 80px;
+            padding-top: 20px;
+            background-color: lightgrey;
+            height: 60px;
+            text-shadow: 2px 2px orange;
+        }
+
+        .navbar ul {
+            margin: 0;
+        }
+
+        .navbar ul li a {
+            display: block;
+            color: black;
+            font: normal small-caps 450 20px Times New Roman;
+            padding: 27px 120px;
+        }
+
+        .navbar ul li a:hover:not(.active) {
+            background-color: aquamarine;
+            color: white;
+        }
+
+        .navbar ul li a.active {
+            background-color: green;
+            color: white;
+        }
+
+        @media screen and (max-width: 900px) {
+            .navbar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .navbar h1 { 
+                background-color: initial;
+                margin-left: -40px;
+            }
+
+            .navbar ul {
+                display: flex;
+                align-items: center;
+            }
+
+            .navbar ul li {
+                display: inline;
+                /* This is fine as is */
+            }
+
+            .navbar ul li a {
+                display: inline-block;
+                /* Allows links to flow horizontally */
+                padding: 10px 20px;
+                /* Reduced padding to fit small screens */
+                font-size: 18px;
+                margin-left: 10px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .navbar {
+                width: 100%;
+                height: auto;
+            }
+
+            .navbar li {
+                display: block;
+            }
+
+            .navbar li a {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Exercise One</h1>
+        <ul>
+            <li><a href="#" target="_blank" class="active">Home</a></li>
+            <li><a href="#" target="_blank">Contact</a></li>
+            <li><a href="#" target="_blank">About</a></li>
+            <li><a href="#" target="_blank">Services</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
